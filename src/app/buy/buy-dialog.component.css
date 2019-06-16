@@ -1,0 +1,39 @@
+
+
+mat-form-field {
+  width: 100%;
+}
+
+mat-radio-group {
+  margin: 0 15px
+}
+
+.row {
+  margin: 15px 0
+}
+
+.mat-dialog-content {
+  max-height: initial;
+}
+
+#key {
+  line-height: inherit;
+  padding: inherit;
+  font-size: inherit;
+  min-width: inherit;
+}
+/*
+
+mat-radio-group  {
+  display: flex;
+  flex-direction: column;
+  margin: 15px 0;
+}
+
+
+.fake {
+  font-size: 12px;
+  color: rgba(0,0,0,0.6);
+  font-weight: 500;
+}
+*/

@@ -1,0 +1,31 @@
+<h1 mat-dialog-title>购买 无冬镇物语</h1>
+<form ngNativeValidate>
+  <div mat-dialog-content>
+    <mat-form-field appearance="standard" floatLabel="always">
+      <mat-label>邮箱</mat-label>
+      <input type="email" [(ngModel)]="email" matInput required />
+      <mat-hint>购买后激活码会发送至邮箱中。如果没有收到激活邮件，请<button mat-flat-button id="key">点击这里</button>取回激活码。</mat-hint>
+    </mat-form-field>
+
+    <div class="row">
+      <label class="fake">支付方式</label>
+      <mat-radio-group aria-label="Select an option">
+        <mat-radio-button value="alipay" checked>支付宝</mat-radio-button>
+      </mat-radio-group>
+    </div>
+    <div class="row">
+      <label class="fake">价格</label>
+      ￥60
+    </div>
+
+    <!--  <p>What's your favorite animal?</p>-->
+    <!--  <mat-form-field>-->
+    <!--    <input matInput>-->
+    <!--  </mat-form-field>-->
+  </div>
+  <div mat-dialog-actions align="end">
+    <button mat-button mat-dialog-close>取消</button>
+    <button type="button" mat-button (click)="pay()">购买</button>
+  </div>
+  <!--</div>-->
+</form>
