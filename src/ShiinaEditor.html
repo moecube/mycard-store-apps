@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <title>紫奈文生成器</title>
+</head>
+<body>
+<form id="form">
+  <textarea id="source">This is the English Scriptorium of Chinese Wikisource. If you are from a non-Chinese speaking community and wish to engage in a dialogue with the Chinese wikisource community, please leave your messages here. Note that you may or may not receive a quick respond depending on how many English speaking editors are present in this wikisource. Your participation is appreciated.</textarea>
+  <button>Go!</button>
+</form>
+<style>
+  body {
+    max-width: 800px;
+  }
+
+  #source {
+    width: 100%;
+    min-height: 200px;
+  }
+
+  .a {
+    font-family: "PT Mono";
+  }
+
+  .b {
+    font-family: "PT Sans";
+  }
+
+  .c {
+    font-family: "chal";
+  }
+
+  .d {
+    font-family: ".SF NS Display";
+  }
+
+  .e {
+    font-family: ".SF NS Text";
+  }
+</style>
+<div id="target"></div>
+<script>
+  const classes = ['a', 'b', 'c', 'd', 'e'];
+  document.getElementById('form').addEventListener('submit', event => {
+    event.preventDefault();
+
+    const target = document.getElementById('target');
+    target.innerHTML = '';
+    for (const char of document.getElementById('source').value) {
+      const element = document.createElement('span');
+      element.classList.add(classes[Math.floor(Math.random() * classes.length)]);
+      element.appendChild(document.createTextNode(char));
+      target.insertBefore(element, null);
+    }
+  });
+</script>
+</body>
+</html>

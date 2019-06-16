@@ -5,21 +5,27 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { GameComponent } from './game/game.component';
-import {MatButtonModule, MatIconModule} from '@angular/material';
+import { MatButtonModule, MatDialogModule, MatIconModule, MatInputModule, MatRadioModule } from '@angular/material';
+import { BuyDialogComponent } from './buy/buy-dialog.component';
+import { HttpClientModule } from '@angular/common/http';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
-  declarations: [
-    AppComponent,
-    GameComponent
-  ],
+  declarations: [AppComponent, GameComponent, BuyDialogComponent],
   imports: [
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
     MatButtonModule,
-    MatIconModule
+    MatIconModule,
+    MatInputModule,
+    MatDialogModule,
+    MatRadioModule,
+    HttpClientModule,
+    FormsModule
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
+  entryComponents: [BuyDialogComponent]
 })
-export class AppModule { }
+export class AppModule {}

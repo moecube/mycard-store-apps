@@ -9,9 +9,9 @@ body {
   font-family: Roboto, "Helvetica Neue", sans-serif;
 }
 
-/*body {*/
-/*  background-image: url("./assets/Background_1.png");*/
-/*  background-size: 100% auto;*/
-/*  background-repeat: no-repeat;*/
-/*  background-color: black;*/
-/*}*/
+body {
+  background-image: url("./assets/Background_1.png");
+  background-size: 100%;
+  background-repeat: no-repeat;
+  background-color: black;
+}
